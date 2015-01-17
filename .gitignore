@@ -1,3 +1,5 @@
+/app/config/production
+/app/config/local
 /app/config/database/production.sqlite
 /app/config/packages/anahkiasen/flickering
 /bootstrap/compiled.php
