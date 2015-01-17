@@ -16,7 +16,7 @@
 		<div>
 			<img src="{{ asset('img/album.png') }}" alt="Texto Alternativo" class="img-circle img-thumbnail">
 			<h2>Choisissez votre album</h2>
-			<p>Il est possible de partager un album privé ou publique avec une durée limitée dans le temps.</p>
+			<p>Il est possible de partager un album privé ou public avec une durée limitée dans le temps.</p>
 		</div>
 	</div>
 
