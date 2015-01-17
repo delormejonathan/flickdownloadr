@@ -42,13 +42,4 @@
 <div id="albums"></div>
 @endif
 
-<div class="footer">
-	<hr>
-	<div class="pull-left">&copy; <a href="https://github.com/delormejonathan">Jonathan DELORME</a></div>
-	<div class="pull-right">
-		Icons by <a href="http://iconmonstr.com">iconmonstr</a>.
-		<a href="https://github.com/Anahkiasen/flickering">Flickering</a>.
-	</div>
-</div>
-
 @stop

@@ -35,6 +35,15 @@
 		</div>
 		@include('alert')
 		@yield('content')
+
+		<div class="footer">
+			<hr>
+			<div class="pull-left"><a href="https://github.com/delormejonathan"><span class="fa fa-github"></span> Jonathan DELORME</a></div>
+			<div class="pull-right">
+				Icons by <a href="http://iconmonstr.com">iconmonstr</a>.
+				<a href="https://github.com/Anahkiasen/flickering">Flickering</a>.
+			</div>
+		</div>
 	</div>
 
 	<script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
