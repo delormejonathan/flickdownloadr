@@ -13,10 +13,14 @@
 
 Route::get('/', 'HomeController@index');
 
+Route::group(array('before' => 'auth'), function()
+{
+	Route::get('flickr/disconnect', 'FlickrController@disconnect');
+	Route::get('flickr/albums', 'FlickrController@albums');
+	Route::any('flickr/albums/{album_id}/share', 'FlickrController@share');
+	Route::any('flickr/shares/access/{hash}', 'FlickrController@access');
+	Route::any('flickr/shares/revoke/{id}', 'FlickrController@revoke');
+});
+
 Route::get('flickr/auth', 'FlickrController@auth');
 Route::any('flickr/oauth_callback', 'FlickrController@authcallback');
-Route::get('flickr/disconnect', 'FlickrController@disconnect');
-Route::get('flickr/albums', 'FlickrController@albums');
-Route::any('flickr/albums/{album_id}/share', 'FlickrController@share');
-Route::any('flickr/shares/access/{hash}', 'FlickrController@access');
-Route::any('flickr/shares/revoke/{id}', 'FlickrController@revoke');

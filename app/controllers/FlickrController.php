@@ -119,7 +119,12 @@ class FlickrController extends Controller {
 	}
 	public function revoke($id)
 	{
-		Share::destroy($id);
+		$share = Share::find($id);
+
+		if (Flickering::getUser()->getUid() != $share->uid)
+			return Redirect::back()->withError('Vous n\'êtes pas autorisé à supprimer ce partage.');
+		else
+			Share::destroy($id);
 
 		return Redirect::back()->withMessage('Le partage a été révoqué et n\'est plus accessible.');
 	}

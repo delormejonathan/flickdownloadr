@@ -35,16 +35,9 @@ App::after(function($request, $response)
 
 Route::filter('auth', function()
 {
-	if (Auth::guest())
+	if (! Flickering::isAuthentified())
 	{
-		if (Request::ajax())
-		{
-			return Response::make('Unauthorized', 401);
-		}
-		else
-		{
-			return Redirect::guest('login');
-		}
+		return Redirect::to('/')->withMessage('Vous n\'êtes plus authentifié à Flickr.');
 	}
 });
 
