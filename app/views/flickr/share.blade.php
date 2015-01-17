@@ -23,6 +23,7 @@
 </div>
 @else
 <h3>Le partage est maintenant disponible !</h3><br />
-<input class="form-control" value="{{ action('FlickrController@access', array($share->hash)) }}">
+<input class="form-control" value="{{ action('FlickrController@access', array($share->hash)) }}"><br />
+<a href="{{ action('HomeController@index') }}" class="btn btn-default"><span class="fa fa-arrow-left"></span> Revenir à l'accueil</a>
 @endif
 @stop
