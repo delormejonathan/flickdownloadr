@@ -1,0 +1,11 @@
+/app/config/database/production.sqlite
+/app/config/packages/anahkiasen/flickering
+/bootstrap/compiled.php
+/deployment
+/vendor
+composer.phar
+composer.lock
+.env.*.php
+.env.php
+.DS_Store
+Thumbs.db
