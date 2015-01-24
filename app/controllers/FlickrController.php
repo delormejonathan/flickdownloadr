@@ -68,24 +68,23 @@ class FlickrController extends Controller {
 			$share->name = $user['name'];
 			$share->title = $album->get('title._content');
 			$share->hash = substr(sha1(uniqid() . time()), 0, 10);
-			$share->expiration = Carbon::now();
 
 			$expiration = Input::get('expiration');
 			switch ($expiration) {
 				case 0:
-				$share->expiration->addDay(1);
+				$share->expiration = Carbon::now()->addDay(1);
 				break;
 				case 1:
-				$share->expiration->addWeek(1);
+				$share->expiration = Carbon::now()->addWeek(1);
 				break;
 				case 2:
-				$share->expiration->addWeek(2);
+				$share->expiration = Carbon::now()->addDay(2);
 				break;
 				case 3:
-				$share->expiration->addMonth(1);
+				$share->expiration = Carbon::now()->addMonth(1);
 				break;
 				default:
-				$share->expiration->addWeek(1);
+				$share->expiration = Carbon::now()->addWeek(1);
 				break;
 			}
 
