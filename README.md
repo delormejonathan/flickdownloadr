@@ -32,3 +32,7 @@ php -r "echo sha1(uniqid());"
 #### Important
 
 There is currently a bug due to an older package. You have to modify a file to make this application works with the Flickr API. Modifiy this file : vendor/opauth/flickr/FlickrStrategy.php and replace *http* with *https*.
+
+## Screenshots
+
+![My image](http://img15.hostingpics.net/pics/994151screen.png)
