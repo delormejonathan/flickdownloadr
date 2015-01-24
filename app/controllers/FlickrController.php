@@ -9,7 +9,6 @@ class FlickrController extends Controller {
 	}
 	public function authcallback()
 	{
-		Session::put('key', 'value');
 		Flickering::handshake();
 		if (Request::getMethod() == 'POST') {
 			Flickering::getOpauthCallback();
@@ -38,7 +37,8 @@ class FlickrController extends Controller {
 		$request = $request['photosets']['photoset'];
 
 		foreach ($request as $album) {
-			$photos = Flickering::callMethod('photosets.getPhotos', array('photoset_id' => $album['id'], 'extras' => 'original_format'))->getResults('photo');
+			$photos = Flickering::callMethod('photosets.getPhotos', array('photoset_id' => $album['id'], 'extras' => 'original_format'))->getResults('');
+			$photos = $photos['photo'];
 			$photo = $photos[0];
 			foreach ($photos as $entry) {
 				if ($entry['isprimary'])
