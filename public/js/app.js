@@ -22,8 +22,19 @@ $(document).ready(function() {
 	var download_length = $('.download').length;
 	var download_count = 0;
 
+	$('#speed').change(function() {
+		if ($('#speed option:selected').val() > 0)
+			$('#download').removeAttr('disabled');
+		else
+			$('#download').attr('disabled', 'disabled');
+	})
 
 	$('#download').click(function() {
+		if ($('#speed option:selected').val() == 0) {
+			alert('Veuillez choisir votre type de connexion.');
+			return false;
+		}
+
 		if (! download_count) {
 			$(this).find('span').remove();
 			$(this).prepend('<span class="fa fa-spinner fa-spin"></span>');
@@ -36,7 +47,7 @@ $(document).ready(function() {
 					photo.prev().show();
 					download_count++;
 					$('#download').trigger('click');
-				}, 15000);
+				}, $('#speed option:selected').val());
 			});
 		}
 		else {
@@ -58,6 +69,6 @@ $(document).ready(function() {
 			return function() { 
 				iframe.remove(); 
 			}
-		})(iframe), 16000);
+		})(iframe), $('#speed option:selected').val() + 1000);
 	} 
 });

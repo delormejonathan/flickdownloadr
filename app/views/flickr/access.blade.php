@@ -13,7 +13,13 @@
 	</div>
 
 	<br /><br />
-	<button id="download" class="btn btn-primary"><span class="fa fa-download"></span> Télécharger l'intégralité de l'album</button>
+	<select name="" id="speed" class="form-control">
+		<option value="0">Choisir sa vitesse de téléchargement</option>
+		<option value="15000">ADSL bas débit</option>
+		<option value="7000">ADSL haut débit</option>
+		<option value="3000">Fibre optique</option>
+	</select>
+	<button id="download" disabled class="btn btn-primary"><span class="fa fa-download"></span> Télécharger l'intégralité de l'album</button>
 	<br /><br />
 
 	<div class="row">
