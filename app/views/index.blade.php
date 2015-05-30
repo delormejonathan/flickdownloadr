@@ -39,7 +39,11 @@
 <br />
 
 @else
-<div id="albums"></div>
+<div id="albums">
+	<p class="loading">
+		<i class="fa fa-refresh fa-spin"></i>
+	</p>
+</div>
 @endif
 
 @stop

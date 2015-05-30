@@ -1,8 +1,9 @@
-.footer {
+.loading {
     margin-top: 40px;
-    margin-bottom: 60px;
+    text-align: center;
+    color: #ddd;
+    font-size: 50px;
 }
-
 .thumbnail {
     position:relative;
     overflow:hidden;
@@ -12,7 +13,6 @@
     max-height: 165px;
     overflow:hidden;
 }
-
 .caption, .caption-fixed {
     position:absolute;
     top:0;
@@ -26,8 +26,7 @@
     color:#fff !important;
     z-index:2;
 }
-
-.destacados{
+.destacados {
     padding: 20px 0;
     text-align: center;
 }
@@ -46,4 +45,8 @@
     box-shadow: rgba(0, 0, 0, 0.1) 0px 5px 5px 2px;
     background: rgba(200, 200, 200, 0.1);
     transition: 0.5s;
+}
+.footer {
+    margin-top: 40px;
+    margin-bottom: 60px;
 }
