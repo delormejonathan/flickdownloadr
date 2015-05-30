@@ -90,8 +90,8 @@ class FlickrController extends Controller {
 
 			$share->save();
 
-			$photos = Flickering::callMethod('photosets.getPhotos', array('photoset_id' => $album_id, 'extras' => 'original_format'))->getResults('photo');
-			foreach ($photos as $entry) {
+			$photos = Flickering::callMethod('photosets.getPhotos', array('photoset_id' => $album_id, 'extras' => 'original_format'))->getResults();
+			foreach ($photos['photo'] as $entry) {
 				$photo = new Photo;
 				$photo->pid = $entry['id'];
 				$photo->farm = $entry['farm'];
