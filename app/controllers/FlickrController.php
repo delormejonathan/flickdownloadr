@@ -58,7 +58,7 @@ class FlickrController extends Controller {
 	{
 		Flickering::handshake();
 
-		$album = Flickering::callMethod('photosets.getInfo', array('photoset_id' => $album_id))->getResults()->toArray();
+		$album = Flickering::callMethod('photosets.getInfo', array('photoset_id' => $album_id))->getResults();
 
 		if (Request::isMethod('post')) {
 			$user = Flickering::getUser()->getInformations();
