@@ -2,7 +2,7 @@
 
 @section('content')
 @if (! isset($share))
-<h3>Partager l'album &laquo; {{ $album->get('title._content') }} &raquo;</h3><br />
+<h3>Partager l'album &laquo; {{ $album['title']['_content'] }} &raquo;</h3><br />
 <div class="row">
 	<div class="col-lg-3">
 		<form action="" method="POST">

@@ -66,7 +66,7 @@ class FlickrController extends Controller {
 			$share->uid = Flickering::getUser()->getUid();
 			$share->avatar = $user['image'];
 			$share->name = $user['name'];
-			$share->title = $album->get('title._content');
+			$share->title = $album['title']['_content'];
 			$share->hash = substr(sha1(uniqid() . time()), 0, 10);
 
 			$expiration = Input::get('expiration');
