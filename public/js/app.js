@@ -36,7 +36,7 @@ $(document).ready(function() {
 					photo.prev().show();
 					download_count++;
 					$('#download').trigger('click');
-				}, 3000);
+				}, 15000);
 			});
 		}
 		else {
@@ -58,6 +58,6 @@ $(document).ready(function() {
 			return function() { 
 				iframe.remove(); 
 			}
-		})(iframe), 4000);
+		})(iframe), 16000);
 	} 
 });
